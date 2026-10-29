@@ -52,6 +52,7 @@ export type Result = {
 	matchedKey: string?,
 	corrected: boolean,
 	partial: boolean?, -- matched on the first word of a longer answer ("infraorbital")
+	alsoUsed: { string }?, -- extra spellings to mark used if this answer is accepted
 	input: string,
 }
 
@@ -424,6 +425,33 @@ function Matcher.check(categoryId: string, text: string, used: UsedSet?): Result
 		for _, v in variants(key, false) do
 			table.insert(tries, v)
 		end
+		-- that word (or its plural/singular) already won an answer this round:
+		-- "infraorbital" then "infraorbitals" must not cash in a second answer
+		if used then
+			for _, k in tries do
+				local list = bank.byHead[k]
+				if list and used[k] then
+					local hit = list[1]
+					for _, idx in list do
+						if used[idx] then
+							hit = idx
+							break
+						end
+					end
+					local e = bank.entries[hit]
+					return { ok = false, reason = "used", display = e.display, tier = e.tier, entryIndex = hit,
+						matchedKey = e.keys[1], corrected = true, partial = true, input = text }
+				end
+			end
+		end
+		-- spellings to burn if this partial match is accepted; never a real answer's
+		-- own key, so typing the full name of another answer still works
+		local alsoUsed = {}
+		for _, k in tries do
+			if not bank.byKey[k] then
+				table.insert(alsoUsed, k)
+			end
+		end
 		local usedHit: number? = nil
 		for _, k in tries do
 			local list = bank.byHead[k]
@@ -440,6 +468,7 @@ function Matcher.check(categoryId: string, text: string, used: UsedSet?): Result
 							matchedKey = e.keys[1],
 							corrected = true,
 							partial = true,
+							alsoUsed = alsoUsed,
 							input = text,
 						}
 					end
@@ -479,6 +508,9 @@ function RoundClass.submit(self: Round, text: string): Result
 		self.used[entry.keys[1]] = true -- its real name
 		if result.matchedKey then
 			self.used[result.matchedKey] = true -- the spelling they typed
+		end
+		for _, k in result.alsoUsed or {} do
+			self.used[k] = true -- first-word match: the word they typed, singular and plural
 		end
 		table.insert(self.history, result)
 	end
@@ -716,6 +748,9 @@ function Luck.submit(round, text: string, level: number, mayRescue: boolean?, rn
 		round.used[e.keys[1]] = true
 		if result.matchedKey then
 			round.used[result.matchedKey] = true
+		end
+		for _, k in result.alsoUsed or {} do
+			round.used[k] = true
 		end
 		table.insert(round.history, result)
 	end

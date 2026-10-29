@@ -117,6 +117,9 @@ function Luck.submit(round, text: string, level: number, mayRescue: boolean?, rn
 		if result.matchedKey then
 			round.used[result.matchedKey] = true
 		end
+		for _, k in result.alsoUsed or {} do
+			round.used[k] = true
+		end
 		table.insert(round.history, result)
 	end
 	return result

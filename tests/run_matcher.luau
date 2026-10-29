@@ -110,8 +110,36 @@ local bodyRound = Matcher.newRound("body_parts")
 local a1 = bodyRound:submit("infraorbital")
 local a2 = bodyRound:submit("infraorbitals")
 expect("round: first \"infraorbital\" -> Infraorbital nerve", a1.ok and a1.display == "Infraorbital nerve", describe(a1))
-expect("round: \"infraorbitals\" then moves to another unused infraorbital answer",
-	a2.ok and a2.display ~= "Infraorbital nerve" and string.find(a2.display or "", "^Infraorbital") ~= nil, describe(a2))
+local a3 = bodyRound:submit("Infraorbital")
+local a4 = bodyRound:submit("infraorbital foramen")
+local a5 = bodyRound:submit("infraorbitals")
+expect("round: then \"infraorbitals\" is used (no second answer from the same word)",
+	not a2.ok and a2.reason == "used" and a2.display == "Infraorbital nerve", describe(a2))
+expect("round: then \"Infraorbital\" again is used", not a3.ok and a3.reason == "used", describe(a3))
+expect("round: the full name \"infraorbital foramen\" still passes",
+	a4.ok and a4.display == "Infraorbital foramen" and not a4.partial, describe(a4))
+expect("round: \"infraorbitals\" is still used after that", a5.reason == "used", describe(a5))
+
+-- the other way round: plural first, singular second
+local pluralRound = Matcher.newRound("body_parts")
+local p1 = pluralRound:submit("infraorbitals")
+local p2 = pluralRound:submit("infraorbital")
+expect("round: \"infraorbitals\" first -> Infraorbital nerve", p1.ok and p1.display == "Infraorbital nerve", describe(p1))
+expect("round: then \"infraorbital\" is used", p2.reason == "used", describe(p2))
+
+-- a full name first doesn't burn the first word: "infraorbital" still gets another answer
+local fullRound = Matcher.newRound("body_parts")
+fullRound:submit("Infraorbital foramen")
+local f2 = fullRound:submit("infraorbital")
+expect("round: \"Infraorbital foramen\" then \"infraorbital\" -> Infraorbital nerve",
+	f2.ok and f2.display == "Infraorbital nerve", describe(f2))
+
+-- same loophole through Luck.submit
+local luckBody = Matcher.newRound("body_parts")
+local l1 = Luck.submit(luckBody, "infraorbital", 0, true)
+local l2 = Luck.submit(luckBody, "infraorbitals", 5, true)
+expect("Luck.submit: \"infraorbital\" then \"infraorbitals\" is used",
+	l1.ok and l2.reason == "used" and not l2.lucky, describe(l2))
 local sharkRound = Matcher.newRound("sharks_rays")
 sharkRound:submit("Hammerhead shark")
 local h = sharkRound:submit("hammerhead")
