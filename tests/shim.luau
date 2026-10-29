@@ -10,6 +10,7 @@
 
 local fs = require("@lune/fs")
 local luau = require("@lune/luau")
+local roblox = require("@lune/roblox")
 
 local Shim = {}
 
@@ -176,6 +177,7 @@ local function fakeRequire(target: any)
 		require = fakeRequire,
 		Color3 = Color3,
 		Random = Random,
+		Vector3 = roblox.Vector3,
 	}, { __index = getfenv(0) })
 	local chunk = luau.load(source, { debugName = target._path, environment = env })
 	local result = chunk()
