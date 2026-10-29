@@ -1,0 +1,6 @@
+*.rbxl
+*.rbxlx.lock
+*.rbxl.lock
+sourcemap.json
+__pycache__/
+.DS_Store

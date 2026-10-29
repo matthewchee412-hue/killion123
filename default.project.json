@@ -1,0 +1,12 @@
+{
+  "name": "Shrimpillion",
+  "tree": {
+    "$className": "DataModel",
+    "ServerStorage": { "$path": "src/ServerStorage" },
+    "ServerScriptService": { "$path": "src/ServerScriptService" },
+    "ReplicatedStorage": { "$path": "src/ReplicatedStorage" },
+    "StarterPlayer": {
+      "StarterPlayerScripts": { "$path": "src/StarterPlayerScripts" }
+    }
+  }
+}

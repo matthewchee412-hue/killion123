@@ -1,0 +1,462 @@
+-- Branches of science answer bank (part 1/1). Generated: one answer per line,
+-- first char = rarity tier, then display name, then | nicknames.
+return [==[
+0Politics|Political science
+0Engineering
+0Medicine|Medical specialty
+0Statistics
+0Economics|Economic science|Political economy
+0Physics|Natural philosophy|Physical science
+0Chemistry|Chemical science
+0Psychology|Psychological science
+0Biology|Biological science
+0Electronics
+0Grammar
+0Mathematics|Maths|Math
+0Mechanics
+0Nutrition
+0Geography|Geographics
+0Anatomy|General anatomy
+0Geometry
+0Pharmacy|Pharmaceutics
+0Genetics|Genetic science
+0Sociology
+0Algebra
+0Geology
+0Ecology|Bionomics|Environmental science
+0Aerospace
+0Forestry
+0Anthropology
+0Food science
+0Mythology
+0Astronomy|Uranology
+0Data science
+0Physiology
+0Political science
+0Optics
+0Archaeology
+0Pathology
+0Robotics
+0Earth science
+0Neuroscience
+0Computer science
+0Linguistics
+0Sports science
+0Biotechnology|Biotech
+0Dentistry|Dental medicine|Odontology
+0Botany|Phytology
+0Biochemistry
+0Materials science
+0Meteorology
+0Zoology|Zoological science
+0Marine biology
+0Palaeontology|Paleontology|Fossilology
+1Epidemiology
+1Environmental science
+1Microbiology
+1Neurology|Clinical neurology
+1Horticulture
+1Pharmacology|Pharmacological medicine|Materia medica
+1Marine science
+1Toxicology
+1Immunology
+1Home economics|Home ec|Domestic science|Household arts
+1Acoustics
+1Thermodynamics
+1Taxonomy
+1Cardiology
+1Soil science
+1Magnetism|Magnetics
+1Nanotechnology
+1Astrophysics
+1Cosmology|Cosmogony|Cosmogeny
+1Agricultural science
+1Physical chemistry
+1Rocket science
+1Metallurgy
+1Nuclear physics|Atomic physics|Nucleonics
+1Dermatology
+1Cryptography
+1Civics
+1Oceanography|Oceanology
+1Cell biology
+1Hydrology
+1Bioinformatics
+1Artificial intelligence
+1Entomology|Bugology
+1Prosthetics
+1Organic chemistry
+1Trigonometry|Trig
+1Mineralogy
+1Geophysics|Geophysical science
+2Finance
+2Surgery
+2Dynamics|Kinetics
+2Hygiene|Hygienics
+2Life science|Bioscience
+2Information science|Informatics|Information processing
+2Social science
+2Natural history
+2Psychiatry|Psychopathology|Psychological medicine
+2Medical science
+2Syntax
+2Natural science
+2Group theory
+2Set theory
+2Virology
+2Brain science
+2Morphology|Geomorphology
+2Histology
+2Arithmetic
+2Crystallography
+2Quantum physics|Quantum mechanics
+2Semantics
+2Oncology
+2Molecular biology
+2Biomechanics
+2Ornithology
+2Atmospheric science
+2Space medicine
+2Pediatrics|Paediatrics|Pediatric medicine|Pedology
+2Topography
+2Geochemistry
+2Particle physics|High-energy physics
+2Embryology
+2Decomposition|Vector decomposition
+2Psychotherapy|Psychotherapeutics|Mental hygiene
+2Agronomy|Scientific agriculture
+2Forensic science
+2Veterinary science
+2Sports medicine
+2Electromagnetism|Electromagnetics
+2Therapeutics
+2Topology|Analysis situs
+2Radiology
+2Climatology
+2Evolutionary biology
+2Kinesiology
+2Bacteriology
+2Analytical chemistry
+2Nuclear medicine
+2Emergency medicine
+2Seismology
+2Aeronautics|Astronautics
+2Internal medicine|General medicine
+2Planetary science
+2Obstetrics|Tocology|Midwifery
+2Parasitology
+2Mycology
+2Criminology
+2Genomics
+2Social psychology
+2Eugenics
+2Machine translation
+2Etymology
+2Surface chemistry
+2Ophthalmology
+2Petrology|Lithology
+2Genetic engineering|Gene-splicing|Recombinant DNA technology
+3Ethology
+3Applied psychology|Industrial psychology
+3Solar physics
+3Demography|Human ecology
+3Ballistics
+3Gynecology|Gynaecology
+3Astrobiology
+3Ethnography|Descriptive anthropology
+3Geopolitics
+3Avionics
+3Harmonics
+3Urology|Urogenital medicine
+3Clinical psychology
+3Cognitive science
+3Tropical medicine
+3Archeology|Archaeology
+3Group dynamics
+3Endocrinology
+3Applied mathematics|Applied math
+3Pure mathematics
+3Wave mechanics
+3Tectonics|Plate tectonics|Plate tectonic theory
+3Biometrics|Biometry|Biostatistics
+3Volcanology|Vulcanology
+3Dental surgery
+3Inorganic chemistry
+3Experimental psychology|Psychonomics
+3Triangulation
+3Limnology
+3Macroeconomics
+3Problem solving
+3Probability theory|Theory of probability
+3Phonology|Phonemics
+3Economic geography
+3Glaciology
+3Physical geography|Physiography
+3Linear programming
+3Gastroenterology
+3Herpetology
+3Hematology|Haematology
+3Stratigraphy
+3Neurobiology
+3Ichthyology
+3Cognitive psychology
+3Classical mechanics|Newtonian mechanics
+3Cybernetics
+3Biophysics
+3Fluid mechanics|Hydraulics
+3Regional anatomy|Topographic anatomy|Topology
+3Phonetics
+3Systematics
+3Ethnology
+3Clinical anatomy|Applied anatomy
+3Positive correlation|Direct correlation
+3Statistical mechanics
+3Econometrics
+3Mammalogy
+3Gross anatomy|Macroscopic anatomy
+3Plane geometry
+3Plasma physics
+3Solid geometry
+3Negative correlation|Indirect correlation
+3Anesthesiology
+3Metrology
+3Microelectronics
+3Geriatrics|Gerontology
+3Kinematics
+3Orthopedics|Orthopaedics
+3Functional anatomy|Physiological anatomy|Morphophysiology
+3Dietetics
+3Pharmacokinetics
+3Statics
+3Elementary geometry|Parabolic geometry|Euclidean geometry
+3Economic geology
+3Dental anatomy
+3Differential psychology
+3Forensic medicine|Forensic pathology
+3Veterinary medicine
+3Mining geology
+3Rheumatology
+3Partial correlation
+3Primatology
+3Nephrology
+3Developmental psychology|Genetic psychology|Child psychology
+3Orthodontics|Orthodontia|Orthodonture|Dental orthopedics|Dental orthopaedics
+3Proteomics
+3Comparative psychology|Animal psychology
+3Molecular genetics
+3Social anthropology|Cultural anthropology
+3Numerical analysis
+3Physical anthropology
+3Audiology|Audiometry
+3Biomedicine
+3Abnormal psychology|Psychopathology
+3Linear algebra
+3Radio astronomy
+3Matrix algebra
+3Structuralism|Structural linguistics
+3Paleobotany|Palaeobotany
+3Biogeography
+3Microeconomics
+3Pragmatics
+3Vector algebra
+3Realpolitik|Practical politics
+3Comparative anatomy
+3Developmental anatomy
+3Geodesy
+3Neurophysiology
+3Cytology
+3Electrochemistry
+3Hydrodynamics|Hydrokinetics
+3Petroleum geology
+4Cryogenics|Cryogeny
+4Dendrochronology
+4Palynology
+4Podiatry|Chiropody
+4Phrenology
+4Physiological psychology|Neuropsychology|Psychophysiology
+4Holography
+4Biomedical science
+4Behaviorism|Behaviourism|Behavioristic psychology|Behaviouristic psychology
+4Sociolinguistics
+4Descriptive grammar
+4Egyptology
+4Integral calculus
+4Celestial mechanics
+4Reflexology
+4Historical linguistics|Diachronic linguistics|Diachrony
+4Bioremediation
+4Dialect geography|Linguistic geography
+4Differential calculus|Method of fluxions
+4Psychopharmacology
+4Electron optics
+4Hydrography
+4Rheology
+4Cognitive neuroscience
+4Formal semantics
+4Compound morphology
+4Neuroanatomy
+4Enzymology
+4Cognitive semantics|Conceptual semantics|Semasiology
+4Pneumatics
+4Microscopic anatomy
+4Spherical geometry
+4Photochemistry
+4Serology
+4Malacology
+4Psycholinguistics
+4Cosmetic dentistry
+4Speleology|Spelaeology
+4Sociobiology
+4Analytic geometry|Analytical geometry|Coordinate geometry
+4Computational linguistics
+4Cytogenetics
+4Descriptive linguistics
+4Cryptanalysis|Cryptanalytics|Cryptography|Cryptology
+4Neuropsychiatry
+4Neonatology
+4Cryonics
+4Epigraphy
+4Electrostatics
+4Endodontics|Endodontia
+4Psychophysics
+4Hyperbolic geometry
+4Fourier analysis|Harmonic analysis
+4Osteology
+4Silviculture
+4Thoracic medicine
+4Paleoecology|Palaeoecology
+4Natural language processing|NLP|Human language technology
+4Periodontics|Periodontia
+4Prosthodontics|Prosthodontia
+4Penology|Poenology
+4Functional genomics
+4Structural genomics
+4Hemodynamics
+4Radiobiology
+4Supply-side economics
+4Ritualism
+4Fractal geometry
+4Powder metallurgy
+4Spurious correlation
+4Paleobiology|Palaeobiology
+4Solid-state physics
+4Traumatology|Accident surgery
+4Magnetohydrodynamics
+4Radiochemistry|Nuclear chemistry
+4Astrometry
+4Cosmography
+4Elliptic geometry|Riemannian geometry
+4Otology
+4Phytochemistry
+4Lexical semantics
+4Paleography
+4Pharmacogenetics
+4Exobiology|Space biology|Astrobiology
+4Freudian psychology
+4Psychometry|Psychometrics|Psychometrika
+4Thermochemistry
+4Paleogeography|Palaeogeography
+4Proctology
+4Cladistics|Cladistic analysis
+4Paleoanthropology|Palaeoanthropology|Human paleontology|Human palaeontology
+4Phycology|Algology
+4Marine archeology|Marine archaeology|Underwater archeology|Underwater archaeology
+4Generative grammar
+4Prescriptive grammar
+4Projective geometry|Descriptive geometry
+4Astrodynamics
+4Psychodynamics
+4Prescriptive linguistics
+4Quantum field theory
+4Teratology
+4Quadratics
+4Spherical trigonometry
+4Paleoclimatology|Palaeoclimatology
+4Hydrostatics
+4Architectonics|Tectonics
+4Angiology
+4Paleopathology|Palaeopathology
+4Sociometry
+4Infinitesimal calculus
+4Deixis
+4Vertebrate paleontology
+4First-order correlation
+4Immunochemistry|Chemoimmunology
+4Cryobiology
+4Macrobiotics
+4Neurolinguistics
+4Thanatology
+4Assyriology
+4Pomology
+4Nosology|Diagnostics
+4Immunopathology
+4Perinatology
+4Proxemics
+4Micropaleontology
+4Strategics
+4Jungian psychology
+4Affine geometry
+4Allergology
+4Protozoology
+4Aerology
+4Quantum electrodynamics|QED
+4Curvilinear correlation|Nonlinear correlation|Skew correlation
+4Calculus of variations
+4Galois theory
+4Nonparametric statistics
+4Myrmecology
+4Inflectional morphology|Accidence
+4Derivational morphology
+4Correlational statistics
+4Synchronic linguistics
+4Quantum chromodynamics|QCD
+4Non-Euclidean geometry
+4Aeromedicine|Aerospace medicine|Aviation medicine
+4Thermostatics|Thermodynamics of equilibrium
+4Aeromechanics|Aerodynamics
+4Rhinolaryngology|Otorhinolaryngology|Otolaryngology
+4Orology|Orography
+4Agrobiology
+4Agrology
+4Algorism
+4Alienism
+4Bioclimatology
+4Biosystematics|Biosystematy
+4Catoptrics
+4Craniology
+4Craniometry
+4Dermatoglyphics
+4Dysgenics|Cacogenics
+4Euthenics
+4Exodontics|Exodontia
+4Femtochemistry
+4Fetology|Foetology
+4Garbology
+4Geostrategy
+4Hypsography
+4Lepidopterology|Lepidoptery
+4Lexicostatistics
+4Metamathematics
+4Morphophonemics
+4Myology
+4Nephology
+4Oology
+4Orthoepy
+4Paleodendrology|Palaeodendrology
+4Paleoethnography|Palaeoethnography
+4Paleogeology|Palaeogeology
+4Paleology|Palaeology
+4Paleomammalogy
+4Paleornithology|Palaeornithology
+4Paleozoology|Palaeozoology
+4Paletiology|Palaetiology
+4Posology
+4Protoarcheology|Protoarchaeology
+4Protohistory|Protoanthropology
+4Psephology
+4Pteridology
+4Selenology
+4Sumerology
+4Thermionics
+4Zymology|Zymurgy
+]==]
